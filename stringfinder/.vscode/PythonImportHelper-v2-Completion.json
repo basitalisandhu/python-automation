@@ -1,0 +1,99 @@
+[
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "schedule",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "schedule",
+        "description": "schedule",
+        "detail": "schedule",
+        "documentation": {}
+    },
+    {
+        "label": "openpyxl",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "openpyxl",
+        "description": "openpyxl",
+        "detail": "openpyxl",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "connect",
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "isExtraImport": true,
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "connect",
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "isExtraImport": true,
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "create_row",
+        "kind": 2,
+        "importPath": "dumpdata",
+        "description": "dumpdata",
+        "peekOfCode": "def create_row():\n    conn = connect(host=\"127.0.0.1\",user=\"root\",password=\"12345678\",database=\"logi\")\n    cursor = conn.cursor()\n    data = []\n    cursor.execute(\"\"\"\n                   SHOW TABLES FROM `logi`;\n                    \"\"\")\n    row_data = []\n    for cur in cursor.fetchall():\n        for c in cur:",
+        "detail": "dumpdata",
+        "documentation": {}
+    },
+    {
+        "label": "generate_report",
+        "kind": 2,
+        "importPath": "dumpdata",
+        "description": "dumpdata",
+        "peekOfCode": "def generate_report():\n    data = create_row()\n    PATH = './tmp/log_file.xlsx'\n    if os.path.isfile(PATH) and os.access(PATH, os.R_OK):\n        wb = openpyxl.load_workbook('tmp/log_file.xlsx')\n        sheet = wb[\"Sheet\"]\n        for row in data:\n            sheet.append(row)\n    else:\n        wb = openpyxl.Workbook()",
+        "detail": "dumpdata",
+        "documentation": {}
+    },
+    {
+        "label": "column_names",
+        "kind": 5,
+        "importPath": "dumpdata",
+        "description": "dumpdata",
+        "peekOfCode": "column_names = [\"Table Names\"]\ndef generate_report():\n    data = create_row()\n    PATH = './tmp/log_file.xlsx'\n    if os.path.isfile(PATH) and os.access(PATH, os.R_OK):\n        wb = openpyxl.load_workbook('tmp/log_file.xlsx')\n        sheet = wb[\"Sheet\"]\n        for row in data:\n            sheet.append(row)\n    else:",
+        "detail": "dumpdata",
+        "documentation": {}
+    },
+    {
+        "label": "compare",
+        "kind": 2,
+        "importPath": "finder",
+        "description": "finder",
+        "peekOfCode": "def compare():\n    book = openpyxl.load_workbook('TableName/tablename.xlsx')\n    sheet = book.active\n    max_rows = sheet. max_row\n    i = 0\n    rows = []\n    data = []\n    row_data = []\n    # if not os.path.exists('Details'):\n    #     os.makedirs('Details')",
+        "detail": "finder",
+        "documentation": {}
+    }
+]
