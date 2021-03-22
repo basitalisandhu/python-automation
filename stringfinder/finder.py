@@ -55,25 +55,25 @@ def compare():
                                         continue
                                     if keyword in line:  # if the keyword exists on the current line...
                                         i+=1
-                                        rowss = repr(keyword),repr(line),repr(file_path)  # print the file path
-                                        rows.append(rowss)
-                                        PATH = 'Details/details.xlsx'
-                                        if os.path.isfile(PATH) and os.access(PATH, os.R_OK):
-                                            wbb = openpyxl.load_workbook(PATH)
-                                            sheetdetails = wbb["Sheet"]
+                                        # rowss = repr(keyword),repr(line),repr(file_path)  # print the file path
+                                        # rows.append(rowss)
+                                        # PATH = 'Details/details.xlsx'
+                                        # if os.path.isfile(PATH) and os.access(PATH, os.R_OK):
+                                        #     wbb = openpyxl.load_workbook(PATH)
+                                        #     sheetdetails = wbb["Sheet"]
 
-                                            sheetdetails.append(rowss)
-                                        else:
-                                            wbb = openpyxl.Workbook()
-                                            wss = wbb.active
-                                            column_names = ["Table Names","line","path"]
-                                            wss.append(column_names)
-                                            sheetdetails = wbb["Sheet"]
+                                        #     sheetdetails.append(rowss)
+                                        # else:
+                                        #     wbb = openpyxl.Workbook()
+                                        #     wss = wbb.active
+                                        #     column_names = ["Table Names","line","path"]
+                                        #     wss.append(column_names)
+                                        #     sheetdetails = wbb["Sheet"]
 
-                                            sheetdetails.append(rowss)
+                                        #     sheetdetails.append(rowss)
 
-                                        # data = []
-                                        wbb.save(PATH)
+                                        # # data = []
+                                        # wbb.save(PATH)
                                         
                         except (IOError, OSError):  # ignore read and permission errors
                             continue

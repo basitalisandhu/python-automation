@@ -1,0 +1,180 @@
+[
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "schedule",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "schedule",
+        "description": "schedule",
+        "detail": "schedule",
+        "documentation": {}
+    },
+    {
+        "label": "openpyxl",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "openpyxl",
+        "description": "openpyxl",
+        "detail": "openpyxl",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "connect",
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "isExtraImport": true,
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "connect",
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "isExtraImport": true,
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "ab",
+        "description": "ab",
+        "peekOfCode": "a = 10\nb = 12\na,b = b, a\nprint (a)\nprint (b)",
+        "detail": "ab",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "ab",
+        "description": "ab",
+        "peekOfCode": "b = 12\na,b = b, a\nprint (a)\nprint (b)",
+        "detail": "ab",
+        "documentation": {}
+    },
+    {
+        "label": "a,b",
+        "kind": 5,
+        "importPath": "ab",
+        "description": "ab",
+        "peekOfCode": "a,b = b, a\nprint (a)\nprint (b)",
+        "detail": "ab",
+        "documentation": {}
+    },
+    {
+        "label": "create_row",
+        "kind": 2,
+        "importPath": "auto_script_runner",
+        "description": "auto_script_runner",
+        "peekOfCode": "def create_row():\n    j=0\n    for row in sheet.iter_rows(min_row=1, min_col=1, max_row=max_rows, max_col=1):\n        i = 0\n        print(j)\n        j+=1\n        for cell in row:\n            if cell.value is None:\n                continue\n            print(cell.value, end=\" \")",
+        "detail": "auto_script_runner",
+        "documentation": {}
+    },
+    {
+        "label": "conn",
+        "kind": 5,
+        "importPath": "auto_script_runner",
+        "description": "auto_script_runner",
+        "peekOfCode": "conn = connect(host=\"127.0.0.1\",user=\"root\",passwd=\"12345678\")\ncursor = conn.cursor()\nbook = openpyxl.load_workbook('TableName/tablename.xlsx')\nsheet = book.active\nmax_rows = sheet. max_row\ndef create_row():\n    j=0\n    for row in sheet.iter_rows(min_row=1, min_col=1, max_row=max_rows, max_col=1):\n        i = 0\n        print(j)",
+        "detail": "auto_script_runner",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "kind": 5,
+        "importPath": "auto_script_runner",
+        "description": "auto_script_runner",
+        "peekOfCode": "cursor = conn.cursor()\nbook = openpyxl.load_workbook('TableName/tablename.xlsx')\nsheet = book.active\nmax_rows = sheet. max_row\ndef create_row():\n    j=0\n    for row in sheet.iter_rows(min_row=1, min_col=1, max_row=max_rows, max_col=1):\n        i = 0\n        print(j)\n        j+=1",
+        "detail": "auto_script_runner",
+        "documentation": {}
+    },
+    {
+        "label": "book",
+        "kind": 5,
+        "importPath": "auto_script_runner",
+        "description": "auto_script_runner",
+        "peekOfCode": "book = openpyxl.load_workbook('TableName/tablename.xlsx')\nsheet = book.active\nmax_rows = sheet. max_row\ndef create_row():\n    j=0\n    for row in sheet.iter_rows(min_row=1, min_col=1, max_row=max_rows, max_col=1):\n        i = 0\n        print(j)\n        j+=1\n        for cell in row:",
+        "detail": "auto_script_runner",
+        "documentation": {}
+    },
+    {
+        "label": "sheet",
+        "kind": 5,
+        "importPath": "auto_script_runner",
+        "description": "auto_script_runner",
+        "peekOfCode": "sheet = book.active\nmax_rows = sheet. max_row\ndef create_row():\n    j=0\n    for row in sheet.iter_rows(min_row=1, min_col=1, max_row=max_rows, max_col=1):\n        i = 0\n        print(j)\n        j+=1\n        for cell in row:\n            if cell.value is None:",
+        "detail": "auto_script_runner",
+        "documentation": {}
+    },
+    {
+        "label": "max_rows",
+        "kind": 5,
+        "importPath": "auto_script_runner",
+        "description": "auto_script_runner",
+        "peekOfCode": "max_rows = sheet. max_row\ndef create_row():\n    j=0\n    for row in sheet.iter_rows(min_row=1, min_col=1, max_row=max_rows, max_col=1):\n        i = 0\n        print(j)\n        j+=1\n        for cell in row:\n            if cell.value is None:\n                continue",
+        "detail": "auto_script_runner",
+        "documentation": {}
+    },
+    {
+        "label": "a_string",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "a_string = 'abcd'\nreplaced_string = a_string.replace('\"', \"\")\nprint(a_string)\nprint(replaced_string)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "replaced_string",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "replaced_string = a_string.replace('\"', \"\")\nprint(a_string)\nprint(replaced_string)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "create_row",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def create_row():\n    newtablename = ('backup_db.dollar_2000')\n    oldtablename = ('logi.dollar_2000')\n    data = []\n            # cursor.execute(\"drop table if exists %s\" % mdb.escape_string(table_name))\n            # query = \n            # INSERT INTO backup_db.date_manu_update SELECT * from logi.date_manu_update;\"\n        if cursor.execute(\"CREATE TABLE IF NOT EXISTS %s SELECT * FROM %s\" % mdb.escape_string(table_name)):\n            conn.commit()\n            query =  \"DROP TABLE IF EXISTS logi.%s;\"",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "conn",
+        "kind": 5,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "conn = connect(host=\"127.0.0.1\",user=\"root\",passwd=\"12345678\")\ncursor = conn.cursor()\ndef create_row():\n    newtablename = ('backup_db.dollar_2000')\n    oldtablename = ('logi.dollar_2000')\n    data = []\n            # cursor.execute(\"drop table if exists %s\" % mdb.escape_string(table_name))\n            # query = \n            # INSERT INTO backup_db.date_manu_update SELECT * from logi.date_manu_update;\"\n        if cursor.execute(\"CREATE TABLE IF NOT EXISTS %s SELECT * FROM %s\" % mdb.escape_string(table_name)):",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "kind": 5,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "cursor = conn.cursor()\ndef create_row():\n    newtablename = ('backup_db.dollar_2000')\n    oldtablename = ('logi.dollar_2000')\n    data = []\n            # cursor.execute(\"drop table if exists %s\" % mdb.escape_string(table_name))\n            # query = \n            # INSERT INTO backup_db.date_manu_update SELECT * from logi.date_manu_update;\"\n        if cursor.execute(\"CREATE TABLE IF NOT EXISTS %s SELECT * FROM %s\" % mdb.escape_string(table_name)):\n            conn.commit()",
+        "detail": "test1",
+        "documentation": {}
+    }
+]
